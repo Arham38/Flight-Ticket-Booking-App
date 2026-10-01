@@ -1,17 +1,15 @@
 /** @format */
 
-import React from "react";
-
 // Imported Destination Images =======>
-import paris from "../assets/paris.jpg";
-import london from "../assets/london.jpg"
-import newyork from "../assets/newyork.jpg"
-import bangkok from "../assets/bangkok.jpg"
+import paris from "../assets/paris.webp";
+import london from "../assets/london.webp"
+import newyork from "../assets/newyork.webp"
+import bangkok from "../assets/bangkok.webp"
 // Imported Traveler Images ========>
-import traveler1 from "../assets/traveler1.jpg";
-import traveler2 from "../assets/traveler2.jpg";
-import traveler3 from "../assets/traveler3.jpg";
-import traveler4 from "../assets/traveler4.jpg";
+import traveler1 from "../assets/traveler1.webp";
+import traveler2 from "../assets/traveler2.webp";
+import traveler3 from "../assets/traveler3.webp";
+import traveler4 from "../assets/traveler4.webp";
 
 const travelers = [
   {
@@ -63,6 +61,8 @@ const Travelers = () => {
                   src={destinationImage}
                   alt='Destination'
                   className='destinationImage'
+                  loading='lazy'
+                  decoding='async'
                 />
 
                 <div className='travelerDetails'>
@@ -71,6 +71,8 @@ const Travelers = () => {
                       src={travelerImage}
                       alt='Traveler'
                       className='travelerImage'
+                      loading='lazy'
+                      decoding='async'
                     />
                   </div>
                   <div className='travelerName'>

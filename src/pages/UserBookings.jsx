@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AxiosService from "../utils/ApiService";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -102,11 +102,9 @@ const UserBookings = () => {
         </ul>
       ) : (
         <div>
-          <p>
-            <h1>No bookings found.</h1>
-          </p>
+          <h1>No bookings found.</h1>
           <p className="bold">
-            It seems like you haven't made any bookings yet. To make a booking,
+            It seems like you have not made any bookings yet. To make a booking,
             navigate to our available flights and reserve your seats today!
           </p>
           <button className="back-to-home-button" onClick={navigateToHome}>
