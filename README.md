@@ -1,86 +1,62 @@
-# 🛫 Flight Ticket Booking App
+# ✈️ Flight Ticket Booking App
 
-## 🌐 Overview
+A responsive flight-booking client built with React and Vite. Travelers can search available flights, review results, book seats, and manage their accounts. Admin screens provide flight and user management workflows.
 
-Flight Ticket Booking App is a web application developed for booking flight tickets. The app has both user and admin functionalities.
+## Features
 
-## 🌟 Features
+- Account registration, sign-in, profile management, and password reset
+- Search flights by route and travel dates; browse available flights
+- Book seats and view or manage existing bookings
+- Admin workflows for creating and managing flights and users
+- Responsive landing page with travel information and destination cards
+- Lazy-loaded routes and optimized WebP/video assets for faster loading
 
-- 🔒 **User Authentication**: Users can sign up, log in, and manage their profiles.
-- 🎫 **Flight Booking**: Users can search for available flights, view details, and book tickets.
-- 🛠️ **Admin Panel**: Admin users can manage flights, users, and bookings.
-- 🔑 **Password Reset**: Users can initiate a password reset through email verification.
+## Tech stack
 
-## ✈️ Available Flights
+- React 18, Vite, React Router
+- Axios for REST API requests
+- Formik and Yup for form handling and validation
+- Node.js and MongoDB are expected on the API/backend side; backend source is not included in this client repository
 
-You can search for the following available flights:
+## Getting started
 
-- **Dubai International Airport**
-  - Check-In: 2023-12-10
-  - Check-Out: 2023-12-11
+### Requirements
 
-- **Los Angeles International Airport**
-  - Check-In: 2023-12-15
-  - Check-Out: 2023-12-16
+- Node.js 18 or newer
+- npm
+- A compatible flight-booking API server
 
-- **Heathrow Airport**
-  - Check-In: 2023-12-20
-  - Check-Out: 2023-12-21
+### Install and configure
 
-- **Hamad International Airport**
-  - Check-In: 2023-12-25
-  - Check-Out: 2023-12-26
+```bash
+npm ci
+```
 
-- **Dallas/Fort Worth International Airport**
-  - Check-In: 2023-12-30
-  - Check-Out: 2023-12-31
+Create a local `.env` file in the project root:
 
-- **Frankfurt Airport**
-  - Check-In: 2024-01-05
-  - Check-Out: 2024-01-06
+```env
+VITE_API_URL=http://localhost:5000
+VITE_GOOGLE_MAP_API_KEY=your-google-maps-browser-key
+```
 
-- **Charles de Gaulle Airport**
-  - Check-In: 2024-01-10
-  - Check-Out: 2024-01-11
+Set `VITE_API_URL` to the base URL of your backend. The Google Maps key is only needed for the map page; restrict it to the intended websites and Maps APIs. Vite variables are exposed in the browser bundle, so never put private server secrets in them. Restart the dev server after changing environment variables.
 
-- **Changi Airport**
-  - Check-In: 2024-01-15
-  - Check-Out: 2024-01-16
+### Run locally
 
-- **Hong Kong International Airport**
-  - Check-In: 2024-01-20
-  - Check-Out: 2024-01-21
+```bash
+npm run dev
+```
 
-- **Istanbul Airport**
-  - Check-In: 2024-01-25
-  - Check-Out: 2024-01-26
+Vite prints the local URL when the server starts. To create a production build:
 
-## 💻 Tech Stack
+```bash
+npm run build
+```
 
-- 🖥️ **Front-end**: Reactjs
-- 🖥️ **Back-end**: Nodejs
-- 🗄️ **Database**: MongoDB
+## Backend configuration
 
-## 🚪 Admin Credentials
+The client calls flight, booking, and user REST endpoints through `VITE_API_URL`. Start a compatible backend and database separately, then configure its URL in `.env`. This repository does not include backend setup scripts or seeded demo accounts; use accounts configured in your own development backend.
 
-To access the admin panel, use the following credentials:
+## Contributing
 
-- 📧 **Email**: admin@gmail.com
-- 🔒 **Password**: Admins@1
-
-## 👥 User Credentials
-
-To test user functionalities, use the following credentials:
-
-- 📧 **Email**: user1@gmail.com
-- 🔒 **Password**: Users@01
-
-- 📧 **Email**: user2@gmail.com
-- 🔒 **Password**: Users@02
-
-- 📧 **Email**: user3@gmail.com
-- 🔒 **Password**: Users@03
-
-## 🤝 Contributing
-
-Feel free to contribute by opening issues, providing feedback, or submitting pull requests.
+Open an issue to report a bug or suggest an improvement. Pull requests are welcome.
