@@ -1,13 +1,12 @@
 /** @format */
 
-import React from "react";
-import lounge from "../assets/lounge.jpg"
+import lounge from "../assets/lounge.webp"
 
 const Lounge = () => {
   return (
     <div className='lounge container section'>
       <div className='sectionContainer grid'>
-        <div className='imgDiv'><img src={lounge} alt="images-for-client" /></div>
+        <div className='imgDiv'><img src={lounge} alt="Airport lounge" loading='lazy' decoding='async' /></div>
         <div className='textDiv'>
           <h2>Unaccompanied Minor Louge</h2>
 

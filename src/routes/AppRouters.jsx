@@ -1,28 +1,30 @@
 /** @format */
 
-import React from "react";
+import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import Signup from "../pages/Signup";
-import Signin from "../pages/Signin";
-import Admin from "../pages/Admin";
-import Flights from "../pages/Flights";
-import Profile from "../pages/Profile";
-import Booking from "../pages/Booking";
-import AllFlights from "../pages/AllFlights";
-import UserBookings from "../pages/UserBookings";
-import ForgotPassword from "../pages/ForgotPassword";
-import ResetPassword from "../pages/ResetPassword";
-import Map from "../pages/Map";
-import FAQ from "../pages/Faq";
-import Features from "../pages/Features";
-import HowTo from "../pages/HowTo";
-import EditFlight from "../pages/EditFlight";
-import CreateFlightsForm from "../pages/CreateFlights";
-import UpdateUsers from "../pages/UpdateUsers";
+
+const Home = lazy(() => import("../pages/Home"));
+const Signup = lazy(() => import("../pages/Signup"));
+const Signin = lazy(() => import("../pages/Signin"));
+const Admin = lazy(() => import("../pages/Admin"));
+const Flights = lazy(() => import("../pages/Flights"));
+const Profile = lazy(() => import("../pages/Profile"));
+const Booking = lazy(() => import("../pages/Booking"));
+const AllFlights = lazy(() => import("../pages/AllFlights"));
+const UserBookings = lazy(() => import("../pages/UserBookings"));
+const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
+const ResetPassword = lazy(() => import("../pages/ResetPassword"));
+const Map = lazy(() => import("../pages/Map"));
+const FAQ = lazy(() => import("../pages/Faq"));
+const Features = lazy(() => import("../pages/Features"));
+const HowTo = lazy(() => import("../pages/HowTo"));
+const EditFlight = lazy(() => import("../pages/EditFlight"));
+const CreateFlightsForm = lazy(() => import("../pages/CreateFlights"));
+const UpdateUsers = lazy(() => import("../pages/UpdateUsers"));
 
 const AppRouters = () => {
   return (
+    <Suspense fallback={<div className='route-loading'>Loading page…</div>}>
     <Routes>
       <Route path='/home' element={<Home />} />
       <Route path='/admin/*' element={<Admin />} />
@@ -45,6 +47,7 @@ const AppRouters = () => {
       <Route path='/' element={<Navigate to='/home' />} />
       <Route path='/*' element={<Navigate to='/' />} />
     </Routes>
+    </Suspense>
   );
 };
 

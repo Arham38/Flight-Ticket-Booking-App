@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import { Link } from "react-router-dom";
 // Imported Icons ======>
 import { TiSocialFacebook } from "react-icons/ti";
@@ -14,7 +13,7 @@ const Footer = () => {
       <div className='sectionContainer container grid'>
         <div className='gridOne'>
           <div className='logoDiv'>
-            <h1>Logo</h1>
+            <h1 className='brandName'><span aria-hidden='true'>✈</span> Skyward</h1>
           </div>
           <p>Your mind should be stronger than your feelings, fly!</p>
           <div className='socialIcon flex'>
@@ -55,10 +54,7 @@ const Footer = () => {
       </div>
       <div className='copyRightDiv flex'>
         <p>
-          Courtesy website | Developed by{" "}
-          <a href='https://emailto-godson2611@gmail.com' target='_blank' rel='noopener noreferrer'>
-            Godson
-          </a>
+          © {new Date().getFullYear()} Skyward. Here’s to the journeys ahead.
         </p>
       </div>
     </div>

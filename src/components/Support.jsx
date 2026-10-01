@@ -1,7 +1,5 @@
-import React from 'react'
-
 // Imported Images ======>
-import gridImage from "../../src/assets/Grid.png";
+import gridImage from "../assets/Grid.webp";
 
 const Support = () => {
   return (
@@ -43,7 +41,7 @@ const Support = () => {
             </div>
           </div>
           <div className='imgDiv'>
-            <img src={gridImage} alt='' />
+            <img src={gridImage} alt='' loading='lazy' decoding='async' />
           </div>
         </div>
       </div>

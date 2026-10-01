@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SiConsul } from "react-icons/si";
 import { CgMenuGridO } from "react-icons/cg";
@@ -114,7 +114,7 @@ const Navbar = () => {
       </div>
       <div className={noBg}>
         <div className='logoDiv'>
-          <h1>Logo</h1>
+          <h1 className='brandName'><span aria-hidden='true'>✈</span> Skyward</h1>
         </div>
         <div className={active}>
           <ul className='menu flex'>
